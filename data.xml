@@ -1,0 +1,12 @@
+<root>
+<user id="1">
+<firstname>Peter</firstname>
+<lastname>Jackson</lastname>
+
+</user>
+<user id="2">
+<firstname>Sally</firstname>
+<lastname>Jones</lastname>
+
+</user>
+</root>

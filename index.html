@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Petar Pedja Grubor_Assignment - jQuery biblioteka-</title>
+    <script src="jquery-1.11.1.min.js"></script>
+    <style>
+        .first{
+            background: #FF0040;
+        }
+        .second{
+            background: #80FF00;
+        }
+        .third{
+            background: #F7FE2E;
+        }
+        .forth{
+            background: #2E9AFE;
+        }
+        .object{
+            border-radius: 50%;
+            border: 2px solid #595959;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+			left: 100px;
+			top: 100px;
+            cursor: pointer;
+        }
+        .object p{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="first object"><p>1</p></div>
+    <div class="second object"><p>2</p></div>
+    <div class="third object"><p>3</p></div>
+    <div class="forth object"><p>4</p></div>
+
+
+<script>
+    $(document).ready(function(){
+
+        setTimeout(function(){
+            startAnimation('.first');
+        }, 0);
+        setTimeout(function(){
+            startAnimation('.second');
+        }, 0);
+        setTimeout(function(){
+            startAnimation('.third');
+        }, 0);
+        setTimeout(function(){
+            startAnimation('.forth');
+        }, 0);
+
+        $('.first').on('click',function(){
+            if ($(this).width() < 150 )
+			{
+				$(this).css({width: "150px", height: "150px", background : '#ffdc18'});
+			} else
+			{
+				$(this).css({width: "50px", height: "50px", background : '#53b0ff'});
+			}
+        });
+		
+		$('.third').on('click',function(){
+            if ($(this).width() < 150 )
+			{
+				$(this).css({width: "150px", height: "150px", background : '#ad00ff'});
+			} else
+			{
+				$(this).css({width: "50px", height: "50px", background : '#2fff4e'});
+			}
+        });
+    });
+
+
+    function startAnimation (elem){
+		var x = Math.floor(Math.random() * (window.innerWidth - 100));
+		var y = Math.floor(Math.random() * (window.innerHeight - 100)) ;
+        $(elem).animate({
+            left : x, top : y
+        },Math.floor((Math.random() * 2000) + 2000),function(){
+            rollbackAnimation(elem, x, y);
+        })
+
+    }
+    function rollbackAnimation (elem, x, y){
+        $(elem).animate({
+            left : Math.random() *x, top : Math.random() *y
+        },Math.floor((Math.random() * 2000) + 2000),function(){
+            startAnimation(elem);
+        })
+    }
+
+</script>
+</body>
+</html>

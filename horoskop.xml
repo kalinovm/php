@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+	<rss>
+		<item>
+			<name>Dnevni</name>
+			<url>https://www.conopljanews.net/astro_dnevni.xml</url>
+		</item>
+		<item>
+		<name>Nedeljni</name>
+		<url>https://www.conopljanews.net/astro_nedeljni.xml</url>
+		</item>
+		<item>
+		<name>Mesečni</name>
+		<url>https://www.conopljanews.net/astro_mesecna.xml</url>
+		</item>
+	</rss>	
+	

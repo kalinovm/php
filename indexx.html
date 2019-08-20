@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <link href="style.css" rel="stylesheet"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+
+    <script src="script.js"></script>
+
+</head>
+
+<body ng-app="searchApp" ng-controller="SearchController">
+
+<div class="bar">
+
+    <input type="text" ng-model="searchString">
+
+</div>
+
+<ul>
+
+    <li ng-repeat="item in items | searchFor:searchString">
+
+        <img ng-src="{{item.image}}">
+
+        <h3>{{item.name}}</h3>
+
+        <p>{{item.description}}</p>
+
+    </li>
+
+</ul>
+
+</body>
+
+</html>

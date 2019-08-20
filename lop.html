@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+        div {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <button>Animate</button>
+    <br>
+    <br>
+    <br>
+    <div class="first">
+    <div style="background:#DC143C; height:100px; width:100px;">
+    </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="second">
+    <div style="background:#CD5C5C; height:100px; width:100px;">
+    </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="third">
+    <div style="background:#FF69B4; height:100px; width:100px;">
+    </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="fourth">
+    <div style="background:#FF7F50; height:100px; width:100px;">
+    </div>
+    </div>
+        <script>
+                $(document).ready(function(){
+            $("button").click(function(){
+                $("div").animate({left: 250}, 1000);
+            });
+            $("div.first").click(function(){
+                $("div.first div").animate({borderRadius:"50%"});
+            });
+            $("div.third").mouseover(function(){
+                $("div.third div").css("background-color","olive");
+            }).mouseout(function() {
+                $("div.third div").css("background-color","#FF69B4");
+               });
+        });
+    </script>
+</body>
+</html>

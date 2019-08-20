@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Корисник</title>
+</head>
+
+<body>
+<?php
+    $instanca = new Korisnik(1, 'Пера', 'Перић', 18);
+    echo '<p>Име корисника: ' . $instanca->getImeiPrezime() .'</p>';
+    echo '<p>Корисник ' . ($instanca->isPunoletan() ? 'је' : 'није') . ' пунолетан </p>';
+?>
+</body>
+
+</html> 

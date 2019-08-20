@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+<platne:kartica xmlns:platne="platneKartice">
+    <platne:naziv>visa virtuon</platne:naziv>
+    <platne:naziv>visa elektron</platne:naziv>
+    <platne:naziv>master card</platne:naziv>
+</platne:kartica>
+<graficke:kartica xmlns:graficke="grafickeKartice"> 
+    <graficke:proizvodjac>msi</graficke:proizvodjac>
+    <graficke:proizvodjac>asus</graficke:proizvodjac>
+    <graficke:proizvodjac>intel</graficke:proizvodjac>
+</graficke:kartica>
+</root>

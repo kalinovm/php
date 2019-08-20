@@ -1,0 +1,48 @@
+<html><body>
+  <label for="stranica1">Страница коцке 1:</label>
+  <input id="stranica1" type="text"/>
+  <label for="stranica2">Страница коцке 2:</label>
+  <input id=stranica2 />
+ <button id="izracunaj">Израчунај</button>
+  <p>Резултат</p>
+  <div id="rezultat1"></div>
+  <div id="rezultat2"></div>
+  <script type="text/javascript">function Kocka(a)
+{
+  a = a ? a : 0;
+  
+  this.setStranica = function(stranica)
+  {
+    a = stranica;
+  };
+  
+  this.zapremina = function()
+  {
+    return a*a*a;  
+  };
+  
+  this.ukupnaDuzina = function()
+  {
+    return 12 * a;
+  };
+}
+
+function prikazi(kocka, id) 
+{
+    document.getElementById(id).insertAdjacentHTML('beforeend', '<p>Запремина:'+kocka.zapremina()+'</p>' +
+'<p>Дужина:'+kocka.ukupnaDuzina()+'</p>');
+}
+
+var kocka1 = new Kocka();
+var kocka2 = new Kocka();
+
+var dugme = document.getElementById('izracunaj');
+dugme.onclick = function() {
+  kocka1.setStranica(document.getElementById('stranica1').value);
+  kocka2.setStranica(document.getElementById('stranica2').value);
+  prikazi(kocka1, 'rezultat1');
+  prikazi(kocka2, 'rezultat2');
+};
+</script>
+</body>
+</html>

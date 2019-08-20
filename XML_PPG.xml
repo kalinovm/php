@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+	<rss>
+		<item>
+			<name>Artist Direct</name>
+			<url>http://www.artistdirect.com/nad/rss/storemusic/0,,80,00.xml</url>
+		</item>
+		<item>
+		<name>iTunes</name>
+		<url>http://itunes.apple.com/WebObjects/MZStore.woa/wpa/MRSS/newreleases/sf=143441/limit=25/rss.xml</url>
+		</item>
+		<item>
+		<name>NewAlbumReleases</name>
+		<url>http://newalbumreleases.net/feed/</url>
+		</item>
+	</rss>	
+	
